@@ -20,3 +20,10 @@ npm run typecheck
 npm run lint
 npm test
 ```
+
+### Compendiums
+
+The compendiums are built from JSON in `packs-src/`:
+
+- `npm run build:packs` compiles `packs-src/` into `packs/`.
+- `npm run extract:packs` does the reverse

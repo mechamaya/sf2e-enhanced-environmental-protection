@@ -6,6 +6,7 @@
     "build": "npm run build:code && npm run build:packs",
     "build:code": "esbuild src/main.ts --bundle --format=esm --target=es2023 --sourcemap --outfile=dist/main.js",
     "build:packs": "node scripts/build-packs.mjs",
+    "extract:packs": "node scripts/extract-packs.mjs",
     "watch": "npm run build:code -- --watch",
     "typecheck": "tsc --noEmit",
     "lint": "biome lint",
