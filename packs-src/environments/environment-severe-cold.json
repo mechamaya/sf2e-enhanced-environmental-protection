@@ -6,7 +6,7 @@
     "img": "icons/svg/frozen.svg",
     "system": {
         "description": {
-            "value": "<p>You're in severe cold.</p><p>Without protection, the cold hurts you over time, usually 1d6 to 2d6 cold damage each hour, and traveling on foot leaves you fatigued after only 4 hours rather than 8.</p><p>Basic environmental protection doesn't keep the cold out by itself. A tactical or better thermal capacitor does.</p>"
+            "value": "<p>You're in severe cold.</p><p>Without protection, the cold hurts you over time, usually 1d6 to 2d6 cold (@Damage[(@item.badge.value)d6[cold]]) damage each hour, and traveling on foot leaves you fatigued after only 4 hours rather than 8.</p><p>Basic environmental protection doesn't keep the cold out by itself. A @UUID[Compendium.sf2e.equipment.6oHrw4XN1IULr9fv]{Tactical Thermal Capacitor} counters severe cold.</p>"
         },
         "rules": [
             {
@@ -35,7 +35,14 @@
         "tokenIcon": {
             "show": false
         },
-        "badge": null
+        "badge": {
+            "type": "counter",
+            "value": 1,
+            "labels": null,
+            "min": null,
+            "max": null,
+            "loop": false
+        }
     },
     "flags": {},
     "folder": null,

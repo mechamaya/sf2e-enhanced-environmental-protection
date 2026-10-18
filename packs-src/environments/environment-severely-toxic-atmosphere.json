@@ -6,7 +6,7 @@
     "img": "icons/magic/air/fog-gas-smoke-dense-green.webp",
     "system": {
         "description": {
-            "value": "<p>You're in a severely toxic atmosphere, so poisonous that ordinary filters can't keep up.</p><p>Breathing it usually deals 4d6 to 6d6 poison damage each minute.</p><p>Under the Enhanced Rules, only an advanced filtered air supply protects you.</p>"
+            "value": "<p>You're in a severely toxic atmosphere, so poisonous that ordinary filters can't keep up.</p><p>Breathing it usually deals 4d6 to 6d6 poison (@Damage[(@item.badge.value)d6[poison]]) damage each minute.</p><p>Under the Enhanced Rules, only an @UUID[Compendium.sf2e-enhanced-environmental-protection.upgrades.Item.hXd5pHw4Oc0vHC3D]{Advanced Filtered Air Supply} protects you.</p>"
         },
         "rules": [
             {
@@ -35,7 +35,14 @@
         "tokenIcon": {
             "show": false
         },
-        "badge": null
+        "badge": {
+            "type": "counter",
+            "value": 4,
+            "labels": null,
+            "min": 4,
+            "max": null,
+            "loop": false
+        }
     },
     "flags": {},
     "folder": null,

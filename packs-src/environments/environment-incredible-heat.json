@@ -6,7 +6,7 @@
     "img": "icons/svg/fire.svg",
     "system": {
         "description": {
-            "value": "<p>You're in incredible heat.</p><p>Without protection, the heat hurts you over time, usually 4d6 to 6d6 fire damage every minute, and traveling on foot leaves you fatigued after only 2 hours rather than 8.</p><p>Basic environmental protection doesn't keep the heat out by itself. A superior thermal capacitor does.</p>"
+            "value": "<p>You're in incredible heat.</p><p>Without protection, the heat hurts you over time, usually 4d6 to 6d6 fire (@Damage[(@item.badge.value)d6[fire]]) damage every minute, and traveling on foot leaves you fatigued after only 2 hours rather than 8.</p><p>Basic environmental protection doesn't keep the heat out by itself. A @UUID[Compendium.sf2e.equipment.Item.Xuz9uyRo2hE2CNvh]{Superior Thermal Capacitor} can counter incredible heat.</p>"
         },
         "rules": [
             {
@@ -35,7 +35,14 @@
         "tokenIcon": {
             "show": false
         },
-        "badge": null
+        "badge": {
+            "type": "counter",
+            "value": 4,
+            "labels": null,
+            "min": 4,
+            "max": null,
+            "loop": false
+        }
     },
     "flags": {},
     "folder": null,

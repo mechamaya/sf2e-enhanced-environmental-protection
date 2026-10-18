@@ -6,7 +6,7 @@
     "img": "icons/svg/radiation.svg",
     "system": {
         "description": {
-            "value": "<p>You're exposed to radiation.</p><p>This usually means a Fortitude save against radiation sickness, at a severity the GM decides.</p><p>Environmental protection doesn't block radiation. A radiation buffer gives you a bonus to those saves and resistance to radiation damage, but doesn't protect you outright.</p>"
+            "value": "<p>You're exposed to radiation.</p><p>This usually means a @Check[fortitude] save against radiation sickness, at a severity the GM decides.</p><p>Environmental protection doesn't block radiation. A @UUID[Compendium.sf2e.equipment.Item.p8WHKcuKovu9Q4pR]{Radiation Buffer} gives you a bonus to those saves and resistance to radiation damage, but doesn't protect you outright.</p>"
         },
         "rules": [
             {

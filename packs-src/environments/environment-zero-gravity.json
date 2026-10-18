@@ -6,7 +6,7 @@
     "img": "icons/magic/control/debuff-energy-hold-levitate-teal-blue.webp",
     "system": {
         "description": {
-            "value": "<p>You're in zero gravity, or zero-g.</p><p>You're untethered, which leaves you clumsy 1 and off-guard until you can anchor yourself. On the other hand, you can lift and carry ten times your usual load, and thrown weapons reach ten times as far.</p><p>Environmental protection doesn't help against gravity. This effect lets rules that depend on zero gravity apply to you.</p>"
+            "value": "<p>You're in zero gravity, or zero-g.</p><p>You're untethered, which leaves you @UUID[Compendium.sf2e.conditions.Item.i3OJZU2nk64Df3xm]{Clumsy 1} and @UUID[Compendium.sf2e.conditions.Item.AJh5ex99aV6VTggg]{Off-Guard} until you can anchor yourself. On the other hand, you can lift and carry ten times your usual load, and thrown weapons reach ten times as far.</p><p>Environmental protection doesn't help against gravity. This effect lets rules that depend on zero gravity apply to you.</p>"
         },
         "rules": [
             {

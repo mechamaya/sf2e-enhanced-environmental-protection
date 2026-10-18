@@ -6,7 +6,7 @@
     "img": "icons/environment/cosmos/planet-moon-blue.webp",
     "system": {
         "description": {
-            "value": "<p>You're in a vacuum.</p><p>With no air, you're at risk of suffocating, and the vacuum itself deals 1d6 to 2d6 bludgeoning damage each minute. Sound can't carry, so most sonic effects fail. Creatures with the cosmic trait shrug off much of this.</p><p>Basic environmental protection lets you breathe normally. Under the Enhanced Rules, it only gives limited protection, using a charge every 4 hours.</p>"
+            "value": "<p>You're in a vacuum.</p><p>With no air, you're at risk of suffocating, and the vacuum itself deals 1d6 to 2d6 bludgeoning (@Damage[(@item.badge.value)d6[bludgeoning]]) damage each minute. Sound can't carry, so most sonic effects fail. Creatures with the cosmic trait shrug off much of this.</p><p>Basic environmental protection lets you breathe normally. Under the Enhanced Rules, it only gives limited protection, using a charge every 4 hours. A @UUID[Compendium.sf2e-enhanced-environmental-protection.upgrades.Item.q5W5Qmh46oDi8T3p]{Tactical Filtered Air Supply} counters the effects letting you breathe in a vacuum.</p>"
         },
         "rules": [
             {
@@ -39,7 +39,14 @@
         "tokenIcon": {
             "show": false
         },
-        "badge": null
+        "badge": {
+            "type": "counter",
+            "value": 1,
+            "labels": null,
+            "min": null,
+            "max": null,
+            "loop": false
+        }
     },
     "flags": {},
     "folder": null,

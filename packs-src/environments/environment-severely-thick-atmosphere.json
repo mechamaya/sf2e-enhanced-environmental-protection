@@ -6,7 +6,7 @@
     "img": "icons/magic/air/fog-gas-smoke-dense-gray.webp",
     "system": {
         "description": {
-            "value": "<p>You're in a severely thick atmosphere, like those deep inside gas giants, where the air is so dense and pressurized it's nearly impossible to breathe.</p><p>Each minute you breathe it, you need to succeed at a Fortitude save or become sickened 2 until you're back in normal air. Without protection, the pressure also deals 4d6 to 6d6 bludgeoning damage every minute, whether or not you succeed at the save.</p><p>Basic environmental protection can't handle this, but a tactical filtered air supply can.</p>"
+            "value": "<p>You're in a severely thick atmosphere, like those deep inside gas giants, where the air is so dense and pressurized it's nearly impossible to breathe.</p><p>Each minute you breathe it, you need to succeed at a @Check[fortitude] save or become @UUID[Compendium.sf2e.conditions.Item.fesd1n5eVhpCSS18]{Sickened 2} until you're back in normal air. Without protection, the pressure also deals 4d6 to 6d6 bludgeoning (@Damage[(@item.badge.value)d6[bludgeoning]]) damage every minute, whether or not you succeed at the save.</p><p>Basic environmental protection can't handle this, but a @UUID[Compendium.sf2e-enhanced-environmental-protection.upgrades.Item.q5W5Qmh46oDi8T3p]{Tactical Filtered Air Supply} can.</p>"
         },
         "rules": [
             {
@@ -35,7 +35,14 @@
         "tokenIcon": {
             "show": false
         },
-        "badge": null
+        "badge": {
+            "type": "counter",
+            "value": 4,
+            "labels": null,
+            "min": 4,
+            "max": null,
+            "loop": false
+        }
     },
     "flags": {},
     "folder": null,

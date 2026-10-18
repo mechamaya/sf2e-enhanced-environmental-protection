@@ -6,7 +6,7 @@
     "img": "icons/magic/air/fog-gas-smoke-green.webp",
     "system": {
         "description": {
-            "value": "<p>You're in a toxic atmosphere, full of gases that are poisonous to most creatures.</p><p>Breathing it usually deals 1d6 to 2d6 poison damage each minute.</p><p>Basic environmental protection doesn't filter these gases. You need an upgrade such as a filtered rebreather, or a commercial filtered air supply under the Enhanced Rules.</p>"
+            "value": "<p>You're in a toxic atmosphere, full of gases that are poisonous to most creatures.</p><p>Breathing it usually deals 1d6 to 2d6 poison (@Damage[(@item.badge.value)d6[poison]]) damage each minute.</p><p>Basic environmental protection doesn't filter these gases. You need an upgrade such as a @UUID[Compendium.sf2e.equipment.Item.0kD0MZgiK0SYS6e6]{Filtered Rebreather}, or a @UUID[Compendium.sf2e-enhanced-environmental-protection.upgrades.Item.9v9qhSuJ1ZFyHAeH]{Filtered Air Supply} under the Enhanced Rules.</p>"
         },
         "rules": [
             {
@@ -35,7 +35,14 @@
         "tokenIcon": {
             "show": false
         },
-        "badge": null
+        "badge": {
+            "type": "counter",
+            "value": 1,
+            "labels": null,
+            "min": null,
+            "max": null,
+            "loop": false
+        }
     },
     "flags": {},
     "folder": null,

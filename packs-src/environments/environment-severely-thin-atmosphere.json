@@ -6,7 +6,7 @@
     "img": "icons/magic/air/air-burst-spiral-blue-gray.webp",
     "system": {
         "description": {
-            "value": "<p>You're in a severely thin atmosphere, with so little air that it's close to a vacuum.</p><p>A few minutes without protection leaves you fatigued, and each hour you need to succeed at a Fortitude save or become drained. That's usually drained 1, though some atmospheres are worse.</p><p>Under the Enhanced Rules, basic environmental protection only gives limited protection here, using a charge every 4 hours. A tactical filtered air supply protects you fully.</p>"
+            "value": "<p>You're in a severely thin atmosphere, with so little air that it's close to a vacuum.</p><p>A few minutes without protection leaves you fatigued, and each hour you need to succeed at a @Check[fortitude] save or become drained. That's usually @UUID[Compendium.sf2e.conditions.Item.4D2KBtexWXa6oUMR]{Drained 1}, though some atmospheres are worse.</p><p>Under the Enhanced Rules, Basic Environmental Protection only gives limited protection here, using a charge every 4 hours. A @UUID[Compendium.sf2e-enhanced-environmental-protection.upgrades.Item.q5W5Qmh46oDi8T3p]{Tactical Filtered Air Supply} protects you fully.</p>"
         },
         "rules": [
             {

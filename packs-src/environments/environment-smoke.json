@@ -6,7 +6,7 @@
     "img": "icons/magic/air/fog-gas-smoke-dense-brown.webp",
     "system": {
         "description": {
-            "value": "<p>You're surrounded by thick smoke.</p><p>Smoke is hard to see through. Visual Perception checks take a circumstance penalty that depends on how thick it is, anything seen through a lot of it is concealed, and you can't see beyond half a mile at most. Close to a wildfire, the smoke and superheated air leave you holding your breath or suffocating.</p><p>Basic environmental protection doesn't filter smoke. Under the Enhanced Rules, an advanced filtered air supply does.</p>"
+            "value": "<p>You're surrounded by thick smoke that is hard to see through.</p><p>Visual Perception checks take a circumstance penalty that depends on how thick it is, anything seen through a lot of it is @UUID[Compendium.sf2e.conditions.Item.DmAIPqOBomZ7H95W]{Concealed}, and you can't see beyond half a mile at most. Close to a wildfire, the smoke and superheated air leave you holding your breath or suffocating.</p><p>Basic environmental protection doesn't filter smoke. Under the Enhanced Rules, an @UUID[Compendium.sf2e-enhanced-environmental-protection.upgrades.Item.hXd5pHw4Oc0vHC3D]{Advanced Filtered Air Supply} does.</p>"
         },
         "rules": [
             {

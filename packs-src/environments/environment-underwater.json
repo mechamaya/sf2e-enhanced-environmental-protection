@@ -6,7 +6,7 @@
     "img": "icons/magic/water/bubbles-air-water-blue.webp",
     "system": {
         "description": {
-            "value": "<p>You're underwater.</p><p>Unless something lets you breathe, you have to hold your breath or risk drowning.</p><p>Basic environmental protection lets you breathe normally. Under the Enhanced Rules, it only gives limited protection, using a charge every hour.</p>"
+            "value": "<p>You're underwater. Unless something lets you breathe, you have to hold your breath or risk drowning.</p><p>Basic environmental protection lets you breathe normally. Under the Enhanced Rules, it only gives limited protection, using a charge every hour. A @UUID[Compendium.sf2e-enhanced-environmental-protection.upgrades.Item.q5W5Qmh46oDi8T3p]{Tactical Filtered Air Supply} counters the effects letting you breathe underwater.</p>"
         },
         "rules": [
             {

@@ -6,7 +6,7 @@
     "img": "icons/svg/fire.svg",
     "system": {
         "description": {
-            "value": "<p>You're in mild heat.</p><p>The heat isn't dangerous on its own, but it wears you down: traveling on foot leaves you fatigued after 4 hours rather than the usual 8.</p><p>Basic environmental protection doesn't keep the heat out by itself. Any thermal capacitor does.</p>"
+            "value": "<p>You're in mild heat.</p><p>The heat isn't dangerous on its own, but it wears you down: traveling on foot leaves you fatigued after 4 hours rather than the usual 8.</p><p>Basic environmental protection doesn't keep the heat out by itself. Any @UUID[Compendium.sf2e.equipment.Item.92Q2vr8vxJgldLKQ]{Thermal Capacitor} counters mild heat.</p>"
         },
         "rules": [
             {

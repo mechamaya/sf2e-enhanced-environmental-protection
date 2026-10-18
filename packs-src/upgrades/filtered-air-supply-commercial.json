@@ -6,6 +6,7 @@
     "img": "systems/sf2e/icons/equipment/armor/gas-mask.webp",
     "system": {
         "description": {
+            "gm": "",
             "value": "<p>This armor upgrade adds a reserve air supply to your armor which helps filter out common contaminants, including protection from most toxic atmospheres.</p>"
         },
         "rules": [
@@ -18,39 +19,67 @@
             }
         ],
         "slug": "filtered-air-supply-commercial",
+        "_migration": {
+            "version": null,
+            "lastMigration": null
+        },
+        "traits": {
+            "otherTags": [],
+            "value": [
+                "tech"
+            ],
+            "rarity": "common"
+        },
+        "publication": {
+            "title": "",
+            "authors": "",
+            "license": "OGL",
+            "remaster": false
+        },
         "level": {
             "value": 0
         },
+        "quantity": 1,
+        "baseItem": null,
+        "bulk": {
+            "value": 0.1
+        },
+        "hp": {
+            "value": 0,
+            "max": 0
+        },
+        "hardness": 0,
         "price": {
             "value": {
                 "sp": 5
             }
         },
-        "bulk": {
-            "value": 0.1
+        "equipped": {
+            "carryType": "worn",
+            "invested": null
         },
-        "quantity": 1,
-        "size": "med",
-        "hardness": 0,
-        "hp": {
-            "max": 0,
-            "value": 0
-        },
-        "material": {
-            "grade": null,
-            "type": null
-        },
-        "baseItem": null,
         "containerId": null,
-        "traits": {
-            "rarity": "common",
-            "value": [
-                "tech"
-            ]
+        "size": "med",
+        "material": {
+            "type": null,
+            "grade": null
+        },
+        "identification": {
+            "status": "identified",
+            "unidentified": {
+                "name": "",
+                "img": "",
+                "data": {
+                    "description": {
+                        "value": ""
+                    }
+                }
+            }
         },
         "usage": {
             "value": "installed-in-armor"
-        }
+        },
+        "subitems": []
     },
     "flags": {},
     "folder": null,
