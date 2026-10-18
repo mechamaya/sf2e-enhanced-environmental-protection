@@ -1,0 +1,46 @@
+{
+    "_id": "eTJnwiJND5RSFllt",
+    "_key": "!items!eTJnwiJND5RSFllt",
+    "name": "Environment: Severely Thin Atmosphere",
+    "type": "effect",
+    "img": "icons/magic/air/air-burst-spiral-blue-gray.webp",
+    "system": {
+        "description": {
+            "value": "<p>You're in a severely thin atmosphere, with so little air that it's close to a vacuum.</p><p>A few minutes without protection leaves you fatigued, and each hour you need to succeed at a Fortitude save or become drained. That's usually drained 1, though some atmospheres are worse.</p><p>Under the Enhanced Rules, basic environmental protection only gives limited protection here, using a charge every 4 hours. A tactical filtered air supply protects you fully.</p>"
+        },
+        "rules": [
+            {
+                "key": "EnvironmentalHazard",
+                "environment": "thin:severe"
+            }
+        ],
+        "slug": "environment-thin-severe",
+        "traits": {
+            "value": [],
+            "otherTags": []
+        },
+        "level": {
+            "value": 0
+        },
+        "duration": {
+            "value": -1,
+            "unit": "unlimited",
+            "expiry": null,
+            "sustained": false
+        },
+        "start": {
+            "value": 0,
+            "initiative": null
+        },
+        "tokenIcon": {
+            "show": false
+        },
+        "badge": null
+    },
+    "flags": {},
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+        "default": 0
+    }
+}

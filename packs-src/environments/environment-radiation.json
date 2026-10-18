@@ -1,0 +1,46 @@
+{
+    "_id": "seUhqRgS1f3zSo5L",
+    "_key": "!items!seUhqRgS1f3zSo5L",
+    "name": "Environment: Radiation",
+    "type": "effect",
+    "img": "icons/svg/radiation.svg",
+    "system": {
+        "description": {
+            "value": "<p>You're exposed to radiation.</p><p>This usually means a Fortitude save against radiation sickness, at a severity the GM decides.</p><p>Environmental protection doesn't block radiation. A radiation buffer gives you a bonus to those saves and resistance to radiation damage, but doesn't protect you outright.</p>"
+        },
+        "rules": [
+            {
+                "key": "EnvironmentalHazard",
+                "environment": "radiation"
+            }
+        ],
+        "slug": "environment-radiation",
+        "traits": {
+            "value": [],
+            "otherTags": []
+        },
+        "level": {
+            "value": 0
+        },
+        "duration": {
+            "value": -1,
+            "unit": "unlimited",
+            "expiry": null,
+            "sustained": false
+        },
+        "start": {
+            "value": 0,
+            "initiative": null
+        },
+        "tokenIcon": {
+            "show": false
+        },
+        "badge": null
+    },
+    "flags": {},
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+        "default": 0
+    }
+}

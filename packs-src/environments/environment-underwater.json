@@ -1,0 +1,50 @@
+{
+    "_id": "y3SMPmHTl58p7I6V",
+    "_key": "!items!y3SMPmHTl58p7I6V",
+    "name": "Environment: Underwater",
+    "type": "effect",
+    "img": "icons/magic/water/bubbles-air-water-blue.webp",
+    "system": {
+        "description": {
+            "value": "<p>You're underwater.</p><p>Unless something lets you breathe, you have to hold your breath or risk drowning.</p><p>Basic environmental protection lets you breathe normally. Under the Enhanced Rules, it only gives limited protection, using a charge every hour.</p>"
+        },
+        "rules": [
+            {
+                "key": "EnvironmentalHazard",
+                "environment": "underwater"
+            },
+            {
+                "key": "RollOption",
+                "option": "terrain:underwater"
+            }
+        ],
+        "slug": "environment-underwater",
+        "traits": {
+            "value": [],
+            "otherTags": []
+        },
+        "level": {
+            "value": 0
+        },
+        "duration": {
+            "value": -1,
+            "unit": "unlimited",
+            "expiry": null,
+            "sustained": false
+        },
+        "start": {
+            "value": 0,
+            "initiative": null
+        },
+        "tokenIcon": {
+            "show": false
+        },
+        "badge": null
+    },
+    "flags": {},
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+        "default": 0
+    }
+}

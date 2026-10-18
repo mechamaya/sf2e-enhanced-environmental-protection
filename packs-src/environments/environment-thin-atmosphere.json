@@ -1,0 +1,46 @@
+{
+    "_id": "Ao1B7D2xqeqPdlBo",
+    "_key": "!items!Ao1B7D2xqeqPdlBo",
+    "name": "Environment: Thin Atmosphere",
+    "type": "effect",
+    "img": "icons/magic/air/air-wave-gust-blue.webp",
+    "system": {
+        "description": {
+            "value": "<p>You're in a thin atmosphere, where the air pressure is low and there may not be enough oxygen to stay healthy.</p><p>If you aren't acclimated, a few hours of breathing it leaves you fatigued. If it's severely thin, you also need to succeed at a Fortitude save each hour or become drained, usually drained 1.</p><p>Basic environmental protection lets you breathe normally.</p>"
+        },
+        "rules": [
+            {
+                "key": "EnvironmentalHazard",
+                "environment": "thin"
+            }
+        ],
+        "slug": "environment-thin",
+        "traits": {
+            "value": [],
+            "otherTags": []
+        },
+        "level": {
+            "value": 0
+        },
+        "duration": {
+            "value": -1,
+            "unit": "unlimited",
+            "expiry": null,
+            "sustained": false
+        },
+        "start": {
+            "value": 0,
+            "initiative": null
+        },
+        "tokenIcon": {
+            "show": false
+        },
+        "badge": null
+    },
+    "flags": {},
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+        "default": 0
+    }
+}

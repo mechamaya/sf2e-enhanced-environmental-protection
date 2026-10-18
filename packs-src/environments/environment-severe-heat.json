@@ -1,0 +1,46 @@
+{
+    "_id": "DVIUJ7WC66zt49CW",
+    "_key": "!items!DVIUJ7WC66zt49CW",
+    "name": "Environment: Severe Heat",
+    "type": "effect",
+    "img": "icons/svg/fire.svg",
+    "system": {
+        "description": {
+            "value": "<p>You're in severe heat.</p><p>Without protection, the heat hurts you over time, usually 1d6 to 2d6 fire damage each hour, and traveling on foot leaves you fatigued after only 4 hours rather than 8.</p><p>Basic environmental protection doesn't keep the heat out by itself. A tactical or better thermal capacitor does.</p>"
+        },
+        "rules": [
+            {
+                "key": "EnvironmentalHazard",
+                "environment": "heat:severe"
+            }
+        ],
+        "slug": "environment-heat-severe",
+        "traits": {
+            "value": [],
+            "otherTags": []
+        },
+        "level": {
+            "value": 0
+        },
+        "duration": {
+            "value": -1,
+            "unit": "unlimited",
+            "expiry": null,
+            "sustained": false
+        },
+        "start": {
+            "value": 0,
+            "initiative": null
+        },
+        "tokenIcon": {
+            "show": false
+        },
+        "badge": null
+    },
+    "flags": {},
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+        "default": 0
+    }
+}

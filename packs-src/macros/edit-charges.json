@@ -1,0 +1,15 @@
+{
+    "_id": "edtChrgsMacr0x01",
+    "_key": "!macros!edtChrgsMacr0x01",
+    "name": "Edit Environmental Protection Charges",
+    "type": "script",
+    "img": "icons/svg/upgrade.svg",
+    "scope": "global",
+    "command": "// Uses the selected token, or your assigned character.\ngame.modules.get(\"sf2e-enhanced-environmental-protection\").api.openChargesDialog();",
+    "flags": {},
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+        "default": 0
+    }
+}

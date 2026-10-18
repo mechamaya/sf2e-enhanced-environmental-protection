@@ -1,0 +1,99 @@
+{
+  "id": "sf2e-enhanced-environmental-protection",
+  "title": "SF2e Enhanced Environmental Protection",
+  "description": "Automates Starfinder 2e armor environmental protection, environments from scenes, regions and effects, and optional enhanced rules for limited protection, partial charges, and Filtered Air Supply upgrades.",
+  "version": "0.5.0",
+  "compatibility": {
+    "minimum": "14.361",
+    "verified": "14.369"
+  },
+  "authors": [
+    {
+      "name": "MechaMaya",
+      "discord": "mechamaya"
+    }
+  ],
+  "socket": true,
+  "esmodules": [
+    "dist/main.js"
+  ],
+  "styles": [
+    "styles/panel.css"
+  ],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    }
+  ],
+  "relationships": {
+    "systems": [
+      {
+        "id": "sf2e",
+        "type": "system",
+        "compatibility": {
+          "minimum": "1.5.1"
+        }
+      }
+    ]
+  },
+  "url": "https://github.com/mechamaya/sf2e-enhanced-environmental-protection",
+  "manifest": "https://github.com/mechamaya/sf2e-enhanced-environmental-protection/releases/latest/download/module.json",
+  "download": "https://github.com/mechamaya/sf2e-enhanced-environmental-protection/releases/download/v0.5.0/module.zip",
+  "readme": "https://github.com/mechamaya/sf2e-enhanced-environmental-protection/blob/main/README.md",
+  "license": "https://github.com/mechamaya/sf2e-enhanced-environmental-protection/blob/main/LICENSE",
+  "packs": [
+    {
+      "name": "environments",
+      "label": "Environments",
+      "path": "packs/environments",
+      "type": "Item",
+      "system": "sf2e",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "TRUSTED": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "upgrades",
+      "label": "Armor Upgrades",
+      "path": "packs/upgrades",
+      "type": "Item",
+      "system": "sf2e",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "TRUSTED": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "macros",
+      "label": "Macros",
+      "path": "packs/macros",
+      "type": "Macro",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "TRUSTED": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    }
+  ],
+  "packFolders": [
+    {
+      "name": "SF2e Enhanced Environmental Protection",
+      "sorting": "m",
+      "packs": [
+        "environments",
+        "upgrades",
+        "macros"
+      ]
+    }
+  ],
+  "documentTypes": {
+    "RegionBehavior": {
+      "environment": {}
+    }
+  }
+}

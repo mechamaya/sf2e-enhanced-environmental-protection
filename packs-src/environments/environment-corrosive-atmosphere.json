@@ -1,0 +1,46 @@
+{
+    "_id": "22VWSZonobPXILfM",
+    "_key": "!items!22VWSZonobPXILfM",
+    "name": "Environment: Corrosive Atmosphere",
+    "type": "effect",
+    "img": "icons/magic/acid/dissolve-drip-droplet-smoke.webp",
+    "system": {
+        "description": {
+            "value": "<p>You're in a corrosive atmosphere, full of caustic gases that can bring hazards like acid rain.</p><p>Depending on how strong it is, the air eats away at creatures and objects alike, dealing anywhere from 1d6 to 6d6 acid damage each minute. Some metals, stones, and treated materials hold up against particular kinds.</p><p>No environmental protection fully counters a corrosive atmosphere. Acid resistance, such as from energy shielding, lessens the damage but won't keep you safe.</p>"
+        },
+        "rules": [
+            {
+                "key": "EnvironmentalHazard",
+                "environment": "corrosive"
+            }
+        ],
+        "slug": "environment-corrosive",
+        "traits": {
+            "value": [],
+            "otherTags": []
+        },
+        "level": {
+            "value": 0
+        },
+        "duration": {
+            "value": -1,
+            "unit": "unlimited",
+            "expiry": null,
+            "sustained": false
+        },
+        "start": {
+            "value": 0,
+            "initiative": null
+        },
+        "tokenIcon": {
+            "show": false
+        },
+        "badge": null
+    },
+    "flags": {},
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+        "default": 0
+    }
+}

@@ -1,0 +1,46 @@
+{
+    "_id": "5Z6F2dKDOo3OW90K",
+    "_key": "!items!5Z6F2dKDOo3OW90K",
+    "name": "Environment: Zero Gravity",
+    "type": "effect",
+    "img": "icons/magic/control/debuff-energy-hold-levitate-teal-blue.webp",
+    "system": {
+        "description": {
+            "value": "<p>You're in zero gravity, or zero-g.</p><p>You're untethered, which leaves you clumsy 1 and off-guard until you can anchor yourself. On the other hand, you can lift and carry ten times your usual load, and thrown weapons reach ten times as far.</p><p>Environmental protection doesn't help against gravity. This effect lets rules that depend on zero gravity apply to you.</p>"
+        },
+        "rules": [
+            {
+                "key": "RollOption",
+                "option": "terrain:zero-gravity"
+            }
+        ],
+        "slug": "environment-zero-gravity",
+        "traits": {
+            "value": [],
+            "otherTags": []
+        },
+        "level": {
+            "value": 0
+        },
+        "duration": {
+            "value": -1,
+            "unit": "unlimited",
+            "expiry": null,
+            "sustained": false
+        },
+        "start": {
+            "value": 0,
+            "initiative": null
+        },
+        "tokenIcon": {
+            "show": false
+        },
+        "badge": null
+    },
+    "flags": {},
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+        "default": 0
+    }
+}

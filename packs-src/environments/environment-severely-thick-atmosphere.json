@@ -1,0 +1,46 @@
+{
+    "_id": "e562rJPqJNaml5v5",
+    "_key": "!items!e562rJPqJNaml5v5",
+    "name": "Environment: Severely Thick Atmosphere",
+    "type": "effect",
+    "img": "icons/magic/air/fog-gas-smoke-dense-gray.webp",
+    "system": {
+        "description": {
+            "value": "<p>You're in a severely thick atmosphere, like those deep inside gas giants, where the air is so dense and pressurized it's nearly impossible to breathe.</p><p>Each minute you breathe it, you need to succeed at a Fortitude save or become sickened 2 until you're back in normal air. Without protection, the pressure also deals 4d6 to 6d6 bludgeoning damage every minute, whether or not you succeed at the save.</p><p>Basic environmental protection can't handle this, but a tactical filtered air supply can.</p>"
+        },
+        "rules": [
+            {
+                "key": "EnvironmentalHazard",
+                "environment": "thick:severe"
+            }
+        ],
+        "slug": "environment-thick-severe",
+        "traits": {
+            "value": [],
+            "otherTags": []
+        },
+        "level": {
+            "value": 0
+        },
+        "duration": {
+            "value": -1,
+            "unit": "unlimited",
+            "expiry": null,
+            "sustained": false
+        },
+        "start": {
+            "value": 0,
+            "initiative": null
+        },
+        "tokenIcon": {
+            "show": false
+        },
+        "badge": null
+    },
+    "flags": {},
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+        "default": 0
+    }
+}

@@ -1,0 +1,79 @@
+{
+    "_id": "q5W5Qmh46oDi8T3p",
+    "_key": "!items!q5W5Qmh46oDi8T3p",
+    "name": "Filtered Air Supply (Tactical)",
+    "type": "equipment",
+    "img": "systems/sf2e/icons/equipment/armor/gas-mask.webp",
+    "system": {
+        "description": {
+            "value": "<p>This armor upgrade adds a reserve air supply to your armor which helps filter out common contaminants, including protection from most toxic atmospheres.</p><p>This upgrades the air supply's valves to extend its protection against extreme pressure. This upgrade protects against severely thick and severely thin atmospheres, vacuum, and breathing while submerged in non-hazardous liquid.</p><p>You gain a +1 status bonus to Fortitude saves against inhaled and olfactory effects.</p>"
+        },
+        "rules": [
+            {
+                "key": "EnvironmentalProtection",
+                "counters": [
+                    "toxic",
+                    "thin:severe",
+                    "thick:severe",
+                    "vacuum",
+                    "underwater"
+                ],
+                "level": "full"
+            },
+            {
+                "key": "FlatModifier",
+                "selector": "fortitude",
+                "type": "status",
+                "value": 1,
+                "predicate": [
+                    {
+                        "or": [
+                            "item:trait:inhaled",
+                            "item:trait:olfactory"
+                        ]
+                    }
+                ]
+            }
+        ],
+        "slug": "filtered-air-supply-tactical",
+        "level": {
+            "value": 1
+        },
+        "price": {
+            "value": {
+                "sp": 150
+            }
+        },
+        "bulk": {
+            "value": 0.1
+        },
+        "quantity": 1,
+        "size": "med",
+        "hardness": 0,
+        "hp": {
+            "max": 0,
+            "value": 0
+        },
+        "material": {
+            "grade": null,
+            "type": null
+        },
+        "baseItem": null,
+        "containerId": null,
+        "traits": {
+            "rarity": "common",
+            "value": [
+                "tech"
+            ]
+        },
+        "usage": {
+            "value": "installed-in-armor"
+        }
+    },
+    "flags": {},
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+        "default": 0
+    }
+}

@@ -1,0 +1,46 @@
+{
+    "_id": "w22HWwYd3PzCNTqo",
+    "_key": "!items!w22HWwYd3PzCNTqo",
+    "name": "Environment: Toxic Atmosphere",
+    "type": "effect",
+    "img": "icons/magic/air/fog-gas-smoke-green.webp",
+    "system": {
+        "description": {
+            "value": "<p>You're in a toxic atmosphere, full of gases that are poisonous to most creatures.</p><p>Breathing it usually deals 1d6 to 2d6 poison damage each minute.</p><p>Basic environmental protection doesn't filter these gases. You need an upgrade such as a filtered rebreather, or a commercial filtered air supply under the Enhanced Rules.</p>"
+        },
+        "rules": [
+            {
+                "key": "EnvironmentalHazard",
+                "environment": "toxic"
+            }
+        ],
+        "slug": "environment-toxic",
+        "traits": {
+            "value": [],
+            "otherTags": []
+        },
+        "level": {
+            "value": 0
+        },
+        "duration": {
+            "value": -1,
+            "unit": "unlimited",
+            "expiry": null,
+            "sustained": false
+        },
+        "start": {
+            "value": 0,
+            "initiative": null
+        },
+        "tokenIcon": {
+            "show": false
+        },
+        "badge": null
+    },
+    "flags": {},
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+        "default": 0
+    }
+}

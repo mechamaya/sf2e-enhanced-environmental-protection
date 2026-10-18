@@ -1,0 +1,46 @@
+{
+    "_id": "LhUvpSoml5vpyXd0",
+    "_key": "!items!LhUvpSoml5vpyXd0",
+    "name": "Environment: Low Gravity",
+    "type": "effect",
+    "img": "icons/magic/control/debuff-energy-hold-levitate-yellow.webp",
+    "system": {
+        "description": {
+            "value": "<p>You're in low gravity, which feels freeing if you're used to normal or heavier gravity.</p><p>Bulk is halved for creatures and objects, so you can carry twice your usual load and jump twice as high and far. Physical ranged attacks reach out to the twelfth range increment. Falls are gentler: the first 10 feet are free, and the rest deals bludgeoning damage equal to a quarter of the distance.</p><p>Environmental protection doesn't help against gravity. This effect lets rules that depend on low gravity apply to you.</p>"
+        },
+        "rules": [
+            {
+                "key": "RollOption",
+                "option": "terrain:low-gravity"
+            }
+        ],
+        "slug": "environment-low-gravity",
+        "traits": {
+            "value": [],
+            "otherTags": []
+        },
+        "level": {
+            "value": 0
+        },
+        "duration": {
+            "value": -1,
+            "unit": "unlimited",
+            "expiry": null,
+            "sustained": false
+        },
+        "start": {
+            "value": 0,
+            "initiative": null
+        },
+        "tokenIcon": {
+            "show": false
+        },
+        "badge": null
+    },
+    "flags": {},
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+        "default": 0
+    }
+}

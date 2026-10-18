@@ -1,0 +1,46 @@
+{
+    "_id": "pBikCIy66MEhoIHq",
+    "_key": "!items!pBikCIy66MEhoIHq",
+    "name": "Environment: Severely Toxic Atmosphere",
+    "type": "effect",
+    "img": "icons/magic/air/fog-gas-smoke-dense-green.webp",
+    "system": {
+        "description": {
+            "value": "<p>You're in a severely toxic atmosphere, so poisonous that ordinary filters can't keep up.</p><p>Breathing it usually deals 4d6 to 6d6 poison damage each minute.</p><p>Under the Enhanced Rules, only an advanced filtered air supply protects you.</p>"
+        },
+        "rules": [
+            {
+                "key": "EnvironmentalHazard",
+                "environment": "toxic:severe"
+            }
+        ],
+        "slug": "environment-toxic-severe",
+        "traits": {
+            "value": [],
+            "otherTags": []
+        },
+        "level": {
+            "value": 0
+        },
+        "duration": {
+            "value": -1,
+            "unit": "unlimited",
+            "expiry": null,
+            "sustained": false
+        },
+        "start": {
+            "value": 0,
+            "initiative": null
+        },
+        "tokenIcon": {
+            "show": false
+        },
+        "badge": null
+    },
+    "flags": {},
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+        "default": 0
+    }
+}

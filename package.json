@@ -1,0 +1,22 @@
+{
+  "name": "sf2e-enhanced-environmental-protection",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "npm run build:code && npm run build:packs",
+    "build:code": "esbuild src/main.ts --bundle --format=esm --target=es2023 --sourcemap --outfile=dist/main.js",
+    "build:packs": "node scripts/build-packs.mjs",
+    "watch": "npm run build:code -- --watch",
+    "typecheck": "tsc --noEmit",
+    "lint": "biome lint",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.5.15",
+    "@foundryvtt/foundryvtt-cli": "^3.0.4",
+    "esbuild": "^0.28.2",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.3"
+  }
+}

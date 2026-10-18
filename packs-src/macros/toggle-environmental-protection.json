@@ -1,0 +1,15 @@
+{
+    "_id": "PHqP7e9aEzO4YYmj",
+    "_key": "!macros!PHqP7e9aEzO4YYmj",
+    "name": "Toggle Environmental Protection",
+    "type": "script",
+    "img": "systems/sf2e/icons/abilities/blue-event-horizon.webp",
+    "scope": "global",
+    "command": "// Uses the selected token, or your assigned character.\ngame.modules.get(\"sf2e-enhanced-environmental-protection\").api.toggle();",
+    "flags": {},
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+        "default": 0
+    }
+}

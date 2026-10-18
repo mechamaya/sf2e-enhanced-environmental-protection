@@ -1,0 +1,46 @@
+{
+    "_id": "3dM0RLRfsHpBy30g",
+    "_key": "!items!3dM0RLRfsHpBy30g",
+    "name": "Environment: High Gravity",
+    "type": "effect",
+    "img": "icons/magic/movement/chevrons-down-yellow.webp",
+    "system": {
+        "description": {
+            "value": "<p>You're in high gravity, which weighs heavily on most creatures.</p><p>Bulk is doubled for creatures and objects, so if you're used to normal gravity you can carry only half your usual load, move at half Speed, and jump half as high and far. Physical ranged attacks can't go past the third range increment, and a fall deals bludgeoning damage equal to the full distance fallen.</p><p>Environmental protection doesn't help against gravity. This effect lets rules that depend on high gravity apply to you.</p>"
+        },
+        "rules": [
+            {
+                "key": "RollOption",
+                "option": "terrain:high-gravity"
+            }
+        ],
+        "slug": "environment-high-gravity",
+        "traits": {
+            "value": [],
+            "otherTags": []
+        },
+        "level": {
+            "value": 0
+        },
+        "duration": {
+            "value": -1,
+            "unit": "unlimited",
+            "expiry": null,
+            "sustained": false
+        },
+        "start": {
+            "value": 0,
+            "initiative": null
+        },
+        "tokenIcon": {
+            "show": false
+        },
+        "badge": null
+    },
+    "flags": {},
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+        "default": 0
+    }
+}

@@ -1,0 +1,46 @@
+{
+    "_id": "30f436h6rbPaQ7YA",
+    "_key": "!items!30f436h6rbPaQ7YA",
+    "name": "Environment: Incredible Cold",
+    "type": "effect",
+    "img": "icons/svg/frozen.svg",
+    "system": {
+        "description": {
+            "value": "<p>You're in incredible cold.</p><p>Without protection, the cold hurts you over time, usually 4d6 to 6d6 cold damage every minute, and traveling on foot leaves you fatigued after only 2 hours rather than 8.</p><p>Basic environmental protection doesn't keep the cold out by itself. A superior thermal capacitor does.</p>"
+        },
+        "rules": [
+            {
+                "key": "EnvironmentalHazard",
+                "environment": "cold:incredible"
+            }
+        ],
+        "slug": "environment-cold-incredible",
+        "traits": {
+            "value": [],
+            "otherTags": []
+        },
+        "level": {
+            "value": 0
+        },
+        "duration": {
+            "value": -1,
+            "unit": "unlimited",
+            "expiry": null,
+            "sustained": false
+        },
+        "start": {
+            "value": 0,
+            "initiative": null
+        },
+        "tokenIcon": {
+            "show": false
+        },
+        "badge": null
+    },
+    "flags": {},
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+        "default": 0
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "_id": "yZBLKU8zgBPc5Xwj",
+    "_key": "!macros!yZBLKU8zgBPc5Xwj",
+    "name": "Set Environment (GM)",
+    "type": "script",
+    "img": "icons/svg/hazard.svg",
+    "scope": "global",
+    "command": "// GM only: apply or remove an environment on the selected tokens.\ngame.modules.get(\"sf2e-enhanced-environmental-protection\").api.openEnvironmentDialog();",
+    "flags": {},
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+        "default": 0
+    }
+}

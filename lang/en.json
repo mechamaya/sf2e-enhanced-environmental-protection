@@ -1,0 +1,209 @@
+{
+    "PF2E": {
+        "RuleElement": {
+            "EnvironmentalHazard": "Environmental Hazard",
+            "EnvironmentalProtection": "Environmental Protection"
+        }
+    },
+    "SF2EEP": {
+        "RuleElement": {
+            "EnvironmentalHazard": {
+                "FIELDS": {
+                    "environment": {
+                        "label": "Environment",
+                        "hint": "For example vacuum, toxic or cold:extreme. Make up your own with lowercase words joined by - or :."
+                    },
+                    "limitedDuration": {
+                        "label": "Limited Duration (hours)",
+                        "hint": "Hours per charge when armor only partly protects. Only used with Limited Protection on."
+                    }
+                }
+            },
+            "EnvironmentalProtection": {
+                "FIELDS": {
+                    "counters": {
+                        "label": "Counters",
+                        "hint": "For example vacuum, underwater or toxic. Must match exactly: thick doesn't cover thick:severe."
+                    },
+                    "level": {
+                        "label": "Level",
+                        "hint": "Limited still protects, but drains charges faster. Resistances and save bonuses don't count as protection.",
+                        "choices": {
+                            "full": "Full",
+                            "limited": "Limited"
+                        }
+                    },
+                    "limitedDuration": {
+                        "label": "Limited Duration (hours)",
+                        "hint": "Hours per charge. Needed for Limited."
+                    }
+                }
+            }
+        },
+        "Settings": {
+            "limitedProtection": {
+                "Name": "Enhanced Rules: Limited Protection",
+                "Hint": "Armor alone only buys time in a vacuum or severely thin air (4 hours per charge) and underwater (1 hour per charge). Upgrades like a Filtered Air Supply can protect you fully."
+            },
+            "keepPartialCharges": {
+                "Name": "Enhanced Rules: Keep Partial Charges",
+                "Hint": "Switching protection off keeps what's left of the current charge. When off, it's lost, as in Player Core."
+            },
+            "ancestryProtection": {
+                "Name": "Enhanced Rules: Ancestry Protection",
+                "Hint": "Creatures that don't breathe are also immune to vacuum and toxic air. Features like the android's Constructed cover vacuum and all thin and thick air, and the cosmic trait covers thin air too. When off, ancestries work as written."
+            },
+            "panelEdge": {
+                "Name": "Status Panel Position",
+                "Hint": "Where your status panel sits on the screen. Only affects you.",
+                "left": "Left",
+                "right": "Right",
+                "top": "Top",
+                "bottom": "Bottom",
+                "hidden": "Hidden"
+            },
+            "disableSf2eAutomation": {
+                "Name": "Disable SF2e Automation's Environmental Protection",
+                "Hint": "Turns off SF2e Automation's environmental protection so only this module handles it. Its other features keep working, and its macros use this module instead. Effects it already made stay until deleted."
+            }
+        },
+        "Notifications": {
+            "NoActor": "Select a token or assign a character first.",
+            "NoArmor": "{actor} isn't wearing armor.",
+            "NotProtective": "{armor} has no environmental protection (it has the Exposed trait).",
+            "NoCharges": "{armor} has no environmental protection charges left. Recharge it first.",
+            "Activated": "{armor}: environmental protection on. {charges} charges left.",
+            "Deactivated": "{armor}: environmental protection off. {charges} charges left.",
+            "Recharged": "{armor}: environmental protection recharged to {charges} charges.",
+            "Depleted": "{armor}: environmental protection has run out.",
+            "TargetOne": "Target one ally to transfer a charge to.",
+            "TransferSelf": "Target an ally: you can't transfer a charge to yourself.",
+            "NoSpareCharge": "{armor} has no whole charge in reserve to transfer.",
+            "TargetFull": "{armor} is already full: it can't take another charge.",
+            "NoGM": "A GM must be connected to transfer a charge."
+        },
+        "Chat": {
+            "Depleted": "<strong>{armor}</strong>: environmental protection has run out.",
+            "Exposed": "{actor} is now unprotected from: {environments}.",
+            "Transferred": "<strong>{source}</strong> connected their armor to <strong>{target}</strong>'s and transferred an environmental protection charge, complete after 1 minute of connection. {source} has {left} charge(s) left."
+        },
+        "Effect": {
+            "NameOn": "Environmental Protection",
+            "NameOff": "Environmental Protection (Off)",
+            "NameUnprotected": "Unprotected: {environments}",
+            "On": "{armor} is protecting you. One charge lasts {hours} hours at the current rate.",
+            "Off": "{armor}'s environmental protection is off.",
+            "Reserve": "Charges in reserve: {charges} ({time} at the current rate).",
+            "PartialKept": "{percent}% of a partly used charge is kept for next time.",
+            "Unprotected": "Nothing is protecting you from: {environments}.",
+            "NoHazards": "No hazardous environments.",
+            "Full": "protected",
+            "Limited": "limited protection, {hours} hours per charge",
+            "None": "unprotected",
+            "Days": "{n}d",
+            "Hours": "{n}h",
+            "Minutes": "{n}m"
+        },
+        "Compat": {
+            "Sf2eAutomationIncomplete": "SF2e Enhanced Environmental Protection couldn't fully disable SF2e Automation's environmental protection (missing: {functions}). That module may have changed; both may now be active."
+        },
+        "SceneConfig": {
+            "Legend": "Environmental Hazards",
+            "Environments": {
+                "Label": "Environments",
+                "Hint": "Environments for every token on this scene, like vacuum or cold:extreme. Press Enter after each. Regions can change these."
+            },
+            "LimitedDuration": {
+                "Label": "Limited Duration (hours)",
+                "Hint": "Hours per charge when armor only partly protects. Only used with Limited Protection on."
+            }
+        },
+        "RegionBehavior": {
+            "Label": "Environmental Hazard",
+            "Environments": {
+                "Label": "Environments",
+                "Hint": "Environments for tokens inside this region, like vacuum or underwater. Press Enter after each."
+            },
+            "Mode": {
+                "Label": "Mode",
+                "Hint": "Add to the scene's environments, remove some inside this region, or replace them.",
+                "add": "Add",
+                "remove": "Remove",
+                "override": "Override"
+            },
+            "LimitedDuration": {
+                "Label": "Limited Duration (hours)",
+                "Hint": "Hours per charge when armor only partly protects. Only used with Limited Protection on."
+            }
+        },
+        "Environment": {
+            "thin": "Thin Atmosphere",
+            "thick": "Thick Atmosphere",
+            "vacuum": "Vacuum",
+            "underwater": "Underwater",
+            "toxic": "Toxic Atmosphere",
+            "smoke": "Smoke",
+            "corrosive": "Corrosive Atmosphere",
+            "radiation": "Radiation",
+            "thin:severe": "Severely Thin Atmosphere",
+            "thick:severe": "Severely Thick Atmosphere",
+            "toxic:severe": "Severely Toxic Atmosphere",
+            "cold:mild": "Mild Cold",
+            "heat:mild": "Mild Heat",
+            "cold:severe": "Severe Cold",
+            "heat:severe": "Severe Heat",
+            "cold:extreme": "Extreme Cold",
+            "heat:extreme": "Extreme Heat",
+            "cold:incredible": "Incredible Cold",
+            "heat:incredible": "Incredible Heat"
+        },
+        "Innate": {
+            "cosmic": "Cosmic",
+            "construct": "Construct",
+            "undead": "Undead"
+        },
+        "Panel": {
+            "SwitchOn": "Switch protection on",
+            "SwitchOff": "Switch protection off",
+            "Recharge": "Recharge",
+            "Transfer": "Transfer a charge to your target",
+            "Edit": "Edit charges",
+            "Pin": "Keep open",
+            "Unpin": "Stop keeping open",
+            "Close": "Close until something changes",
+            "NoArmor": "No armor with environmental protection",
+            "TimeOn": "Current charge: {time} left",
+            "TimeOff": "Charges would last {time} if switched on here",
+            "ChargesOn": "{charges} charge(s) in reserve",
+            "ChargesOff": "{charges} of {max} charges",
+            "Rounds": "{n} rnd",
+            "Party": "Party",
+            "Exposed": "{count} party member(s) unprotected",
+            "Covered": "Protected from: {environments}",
+            "On": "Protection on",
+            "Off": "Protection off"
+        },
+        "EditCharges": {
+            "Title": "Edit Charges: {actor}",
+            "Charges": "Charges (maximum {max})",
+            "Hint": "A fraction is part of a charge. Setting 0 while protection is on switches it off.",
+            "Save": "Save",
+            "Set": "{actor}'s environmental protection ({armor}) set to {charges} charges.",
+            "NotOwner": "You don't own {actor}'s armor."
+        },
+        "EnvironmentTool": {
+            "Title": "Environments",
+            "Environment": "Environment",
+            "CustomKey": "Or a custom key",
+            "CustomKeyHint": "Used instead of the list, like spore-cloud or toxic:severe.",
+            "Apply": "Apply to selected",
+            "Remove": "Remove from selected",
+            "Applied": "{name} applied to {count} token(s).",
+            "Removed": "{name} removed from {count} token(s).",
+            "EffectName": "Environment: {name}",
+            "InvalidKey": "\"{key}\" isn't a valid environment key: use lowercase words joined by - and :, e.g. spore-cloud.",
+            "GMOnly": "Only a GM can set environments.",
+            "NoSelection": "Select one or more tokens first."
+        }
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "_id": "tRnsfrChrgMcr0x1",
+    "_key": "!macros!tRnsfrChrgMcr0x1",
+    "name": "Transfer Charge",
+    "type": "script",
+    "img": "icons/svg/lightning.svg",
+    "scope": "global",
+    "command": "// Transfer one charge to the ally you target. Uses your selected token, or your assigned character.\ngame.modules.get(\"sf2e-enhanced-environmental-protection\").api.transferCharge();",
+    "flags": {},
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+        "default": 0
+    }
+}

@@ -1,0 +1,46 @@
+{
+    "_id": "yNzwBWNJrSSimfDi",
+    "_key": "!items!yNzwBWNJrSSimfDi",
+    "name": "Environment: Smoke",
+    "type": "effect",
+    "img": "icons/magic/air/fog-gas-smoke-dense-brown.webp",
+    "system": {
+        "description": {
+            "value": "<p>You're surrounded by thick smoke.</p><p>Smoke is hard to see through. Visual Perception checks take a circumstance penalty that depends on how thick it is, anything seen through a lot of it is concealed, and you can't see beyond half a mile at most. Close to a wildfire, the smoke and superheated air leave you holding your breath or suffocating.</p><p>Basic environmental protection doesn't filter smoke. Under the Enhanced Rules, an advanced filtered air supply does.</p>"
+        },
+        "rules": [
+            {
+                "key": "EnvironmentalHazard",
+                "environment": "smoke"
+            }
+        ],
+        "slug": "environment-smoke",
+        "traits": {
+            "value": [],
+            "otherTags": []
+        },
+        "level": {
+            "value": 0
+        },
+        "duration": {
+            "value": -1,
+            "unit": "unlimited",
+            "expiry": null,
+            "sustained": false
+        },
+        "start": {
+            "value": 0,
+            "initiative": null
+        },
+        "tokenIcon": {
+            "show": false
+        },
+        "badge": null
+    },
+    "flags": {},
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+        "default": 0
+    }
+}

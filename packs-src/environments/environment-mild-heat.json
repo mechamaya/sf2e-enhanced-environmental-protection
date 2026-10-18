@@ -1,0 +1,46 @@
+{
+    "_id": "jDBeOXchIKYcdNAo",
+    "_key": "!items!jDBeOXchIKYcdNAo",
+    "name": "Environment: Mild Heat",
+    "type": "effect",
+    "img": "icons/svg/fire.svg",
+    "system": {
+        "description": {
+            "value": "<p>You're in mild heat.</p><p>The heat isn't dangerous on its own, but it wears you down: traveling on foot leaves you fatigued after 4 hours rather than the usual 8.</p><p>Basic environmental protection doesn't keep the heat out by itself. Any thermal capacitor does.</p>"
+        },
+        "rules": [
+            {
+                "key": "EnvironmentalHazard",
+                "environment": "heat:mild"
+            }
+        ],
+        "slug": "environment-heat-mild",
+        "traits": {
+            "value": [],
+            "otherTags": []
+        },
+        "level": {
+            "value": 0
+        },
+        "duration": {
+            "value": -1,
+            "unit": "unlimited",
+            "expiry": null,
+            "sustained": false
+        },
+        "start": {
+            "value": 0,
+            "initiative": null
+        },
+        "tokenIcon": {
+            "show": false
+        },
+        "badge": null
+    },
+    "flags": {},
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+        "default": 0
+    }
+}

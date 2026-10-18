@@ -1,0 +1,61 @@
+{
+    "_id": "9v9qhSuJ1ZFyHAeH",
+    "_key": "!items!9v9qhSuJ1ZFyHAeH",
+    "name": "Filtered Air Supply (Commercial)",
+    "type": "equipment",
+    "img": "systems/sf2e/icons/equipment/armor/gas-mask.webp",
+    "system": {
+        "description": {
+            "value": "<p>This armor upgrade adds a reserve air supply to your armor which helps filter out common contaminants, including protection from most toxic atmospheres.</p>"
+        },
+        "rules": [
+            {
+                "key": "EnvironmentalProtection",
+                "counters": [
+                    "toxic"
+                ],
+                "level": "full"
+            }
+        ],
+        "slug": "filtered-air-supply-commercial",
+        "level": {
+            "value": 0
+        },
+        "price": {
+            "value": {
+                "sp": 5
+            }
+        },
+        "bulk": {
+            "value": 0.1
+        },
+        "quantity": 1,
+        "size": "med",
+        "hardness": 0,
+        "hp": {
+            "max": 0,
+            "value": 0
+        },
+        "material": {
+            "grade": null,
+            "type": null
+        },
+        "baseItem": null,
+        "containerId": null,
+        "traits": {
+            "rarity": "common",
+            "value": [
+                "tech"
+            ]
+        },
+        "usage": {
+            "value": "installed-in-armor"
+        }
+    },
+    "flags": {},
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+        "default": 0
+    }
+}

@@ -1,0 +1,50 @@
+{
+    "_id": "4k7O7yPzIvnWLcp0",
+    "_key": "!items!4k7O7yPzIvnWLcp0",
+    "name": "Environment: Vacuum",
+    "type": "effect",
+    "img": "icons/environment/cosmos/planet-moon-blue.webp",
+    "system": {
+        "description": {
+            "value": "<p>You're in a vacuum.</p><p>With no air, you're at risk of suffocating, and the vacuum itself deals 1d6 to 2d6 bludgeoning damage each minute. Sound can't carry, so most sonic effects fail. Creatures with the cosmic trait shrug off much of this.</p><p>Basic environmental protection lets you breathe normally. Under the Enhanced Rules, it only gives limited protection, using a charge every 4 hours.</p>"
+        },
+        "rules": [
+            {
+                "key": "EnvironmentalHazard",
+                "environment": "vacuum"
+            },
+            {
+                "key": "RollOption",
+                "option": "terrain:vacuum"
+            }
+        ],
+        "slug": "environment-vacuum",
+        "traits": {
+            "value": [],
+            "otherTags": []
+        },
+        "level": {
+            "value": 0
+        },
+        "duration": {
+            "value": -1,
+            "unit": "unlimited",
+            "expiry": null,
+            "sustained": false
+        },
+        "start": {
+            "value": 0,
+            "initiative": null
+        },
+        "tokenIcon": {
+            "show": false
+        },
+        "badge": null
+    },
+    "flags": {},
+    "folder": null,
+    "sort": 0,
+    "ownership": {
+        "default": 0
+    }
+}
