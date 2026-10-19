@@ -1,6 +1,6 @@
 import { I18N, MODULE_ID } from "../constants.ts";
 
-export const REGION_MODES = ["add", "remove", "override"] as const;
+const REGION_MODES = ["add", "remove", "override"] as const;
 export type RegionMode = (typeof REGION_MODES)[number];
 
 /** Module sub-types are namespaced by module id; declared under `documentTypes.RegionBehavior` in module.json. */

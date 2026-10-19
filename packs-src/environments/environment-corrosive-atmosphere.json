@@ -10,8 +10,8 @@
         },
         "rules": [
             {
-                "key": "EnvironmentalHazard",
-                "environment": "corrosive"
+                "key": "RollOption",
+                "option": "environment:corrosive"
             }
         ],
         "slug": "environment-corrosive",

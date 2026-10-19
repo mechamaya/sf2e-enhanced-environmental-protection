@@ -1,4 +1,4 @@
-import { getHazards } from "../rule-elements/environmental-hazard.ts";
+import { getHazards } from "../rules/roll-options.ts";
 import type { EnvironmentKey, Hazard } from "../rules/types.ts";
 import { getPlaceHazards } from "./places.ts";
 

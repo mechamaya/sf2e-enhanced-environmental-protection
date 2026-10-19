@@ -10,7 +10,7 @@ interface SettingTypes {
     panelPinned: boolean;
 }
 
-export const PANEL_EDGES = ["left", "right", "top", "bottom", "hidden"] as const;
+const PANEL_EDGES = ["left", "right", "top", "bottom", "hidden"] as const;
 export type PanelEdge = (typeof PANEL_EDGES)[number];
 type SettingKey = keyof SettingTypes;
 

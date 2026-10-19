@@ -10,8 +10,8 @@
         },
         "rules": [
             {
-                "key": "EnvironmentalHazard",
-                "environment": "heat:severe"
+                "key": "RollOption",
+                "option": "environment:heat:severe"
             }
         ],
         "slug": "environment-heat-severe",

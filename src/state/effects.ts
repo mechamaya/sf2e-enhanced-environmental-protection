@@ -7,7 +7,7 @@ import { environmentName, environmentNames } from "../environments/names.ts";
 import { internalOptions } from "./options.ts";
 import { localize } from "../i18n.ts";
 
-export type EffectRole = "protection-on" | "protection-off" | "unprotected";
+type EffectRole = "protection-on" | "protection-off" | "unprotected";
 
 // Fixed IDs: Foundry rejects a duplicate ID, so racing creates can't make two copies.
 const EFFECT_IDS: Record<EffectRole, string> = {
@@ -48,10 +48,6 @@ interface EffectView {
         start: { value: number; initiative: null };
         badge: { type: "counter"; value: number; min: number; max: number } | null;
     };
-}
-
-export function getManagedEffect(actor: ActorSf2e, role: EffectRole): EffectSf2e | undefined {
-    return getManagedEffects(actor, role)[0];
 }
 
 function getManagedEffects(actor: ActorSf2e, role: EffectRole): EffectSf2e[] {

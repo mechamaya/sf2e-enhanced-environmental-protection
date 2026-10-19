@@ -10,8 +10,8 @@
         },
         "rules": [
             {
-                "key": "EnvironmentalHazard",
-                "environment": "toxic:severe"
+                "key": "RollOption",
+                "option": "environment:toxic:severe"
             }
         ],
         "slug": "environment-toxic-severe",

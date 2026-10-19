@@ -11,15 +11,24 @@
         },
         "rules": [
             {
-                "key": "EnvironmentalProtection",
-                "counters": [
-                    "toxic",
-                    "thin:severe",
-                    "thick:severe",
-                    "vacuum",
-                    "underwater"
-                ],
-                "level": "full"
+                "key": "RollOption",
+                "option": "environmental-protection:toxic"
+            },
+            {
+                "key": "RollOption",
+                "option": "environmental-protection:thin:severe"
+            },
+            {
+                "key": "RollOption",
+                "option": "environmental-protection:thick:severe"
+            },
+            {
+                "key": "RollOption",
+                "option": "environmental-protection:vacuum"
+            },
+            {
+                "key": "RollOption",
+                "option": "environmental-protection:underwater"
             },
             {
                 "key": "FlatModifier",

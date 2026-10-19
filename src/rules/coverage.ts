@@ -1,7 +1,7 @@
 import { getSystemUpgradeProtections, hasExposedRemover } from "./system-upgrades.ts";
 import type { Coverage, Hazard, Protection, RulesPreset } from "./types.ts";
 
-export interface ArmorProfile {
+interface ArmorProfile {
     armor: ArmorSf2e;
     protective: boolean;
     upgradeProtections: Protection[];
@@ -31,8 +31,8 @@ function better(a: Coverage, b: Coverage): Coverage {
     return b.source === "innate" && a.source !== "innate" ? b : a;
 }
 
-// The hazard's limitedDuration overrides the preset's, but not a rule element's.
-export function resolveCoverage(
+// The hazard's limitedDuration overrides the preset's, but not a limited protection's own hours.
+function resolveCoverage(
     hazard: Hazard,
     profile: ArmorProfile | null,
     protections: Protection[],

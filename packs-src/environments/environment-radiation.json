@@ -10,8 +10,8 @@
         },
         "rules": [
             {
-                "key": "EnvironmentalHazard",
-                "environment": "radiation"
+                "key": "RollOption",
+                "option": "environment:radiation"
             }
         ],
         "slug": "environment-radiation",

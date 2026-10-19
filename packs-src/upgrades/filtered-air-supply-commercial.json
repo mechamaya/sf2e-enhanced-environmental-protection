@@ -11,11 +11,8 @@
         },
         "rules": [
             {
-                "key": "EnvironmentalProtection",
-                "counters": [
-                    "toxic"
-                ],
-                "level": "full"
+                "key": "RollOption",
+                "option": "environmental-protection:toxic"
             }
         ],
         "slug": "filtered-air-supply-commercial",

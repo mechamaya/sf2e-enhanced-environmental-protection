@@ -2,7 +2,7 @@ import { getSetting } from "../settings.ts";
 import type { ArmorCoverage, EnvironmentKey, RulesPreset } from "./types.ts";
 
 /** Player Core. */
-export const OFFICIAL: RulesPreset = {
+const OFFICIAL: RulesPreset = {
     chargesPerLevel: 1,
     minCharges: 1,
     chargeHours: 24,

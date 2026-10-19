@@ -14,8 +14,7 @@ import { MODULE_ID } from "./constants.ts";
 import { getActorHazards } from "./environments/hazards.ts";
 import { applyEnvironment, openEnvironmentDialog, removeEnvironment } from "./gm/environment-tool.ts";
 import { registerPlaceHooks } from "./environments/place-hooks.ts";
-import { registerHazardRuleElement } from "./rule-elements/environmental-hazard.ts";
-import { getProtections, registerProtectionRuleElement } from "./rule-elements/environmental-protection.ts";
+import { getProtections } from "./rules/roll-options.ts";
 import { getActivePreset } from "./rules/presets.ts";
 import { getSetting, registerSettings } from "./settings.ts";
 import { registerSceneConfig } from "./ui/place-config.ts";
@@ -71,8 +70,6 @@ Hooks.once("init", () => {
         () => reconcileAll(),
         () => panel?.refresh(),
     );
-    registerHazardRuleElement();
-    registerProtectionRuleElement();
     registerEnvironmentBehavior();
 
     let compatMissing: string[] = [];

@@ -5,7 +5,7 @@ interface SystemUpgrade {
     removesExposed?: boolean;
 }
 
-// System upgrades can't carry our rule element, so they're matched by slug (or name, for compendium copies).
+// System upgrades don't carry our roll options, so they're matched by slug (or name, for compendium copies).
 const SYSTEM_UPGRADES: Record<string, SystemUpgrade> = {
     "basic-environmental-protection": {
         counters: [], removesExposed: true

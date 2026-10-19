@@ -10,8 +10,8 @@
         },
         "rules": [
             {
-                "key": "EnvironmentalHazard",
-                "environment": "smoke"
+                "key": "RollOption",
+                "option": "environment:smoke"
             }
         ],
         "slug": "environment-smoke",

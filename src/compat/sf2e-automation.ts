@@ -3,7 +3,7 @@ import { localize } from "../i18n.ts";
 
 // SF2e Automation has its own environmental protection and no way to turn it off. Its scripts are globals looked
 // up by name, so swapping its protection functions for no-ops turns off just that feature.
-export const SF2E_AUTOMATION_ID = "sf2e-anachronism-automation";
+const SF2E_AUTOMATION_ID = "sf2e-anachronism-automation";
 
 const PROTECTION_FUNCTIONS = [
     "getProtectionState",

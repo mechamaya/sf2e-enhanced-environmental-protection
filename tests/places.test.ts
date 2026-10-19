@@ -77,8 +77,9 @@ describe("places", () => {
     describe("primaryToken", () => {
         it("active scene", () => {
             token(scene("Ship", false, ["vacuum"]), "a");
-            token(scene("Station", true, ["thin"]), "a");
-            expect(primaryToken(actor("a"))?.parent?.name).toBe("Station");
+            const station = scene("Station", true, ["thin"]);
+            token(station, "a");
+            expect(primaryToken(actor("a"))?.parent).toBe(station);
         });
 
         it("only token", () => {

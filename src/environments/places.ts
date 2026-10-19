@@ -2,7 +2,7 @@ import { MODULE_ID } from "../constants.ts";
 import { ENVIRONMENT_KEY_PATTERN, type EnvironmentKey, type Hazard } from "../rules/types.ts";
 import { ENVIRONMENT_BEHAVIOR_TYPE, type RegionMode } from "./region-behavior.ts";
 
-export interface EnvironmentSettings {
+interface EnvironmentSettings {
     environments?: Iterable<EnvironmentKey>;
     /** Hours per charge under limited protection, for every environment listed here. */
     limitedDuration?: number | null;

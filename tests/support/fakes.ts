@@ -68,7 +68,7 @@ export function installGame(
     return game;
 }
 
-export const tick = () => new Promise<void>((resolve) => setTimeout(resolve, 0));
+const tick = () => new Promise<void>((resolve) => setTimeout(resolve, 0));
 
 // Sets options.parent like Foundry does, so reusing an options object breaks here too.
 async function dbOp(options: AnyRecord, parent: FakeActor, change: (target: FakeActor) => void): Promise<void> {
@@ -80,7 +80,7 @@ async function dbOp(options: AnyRecord, parent: FakeActor, change: (target: Fake
 let nextId = 0;
 const newId = () => `fake${String(++nextId).padStart(12, "0")}`;
 
-export function fakeItem(data: AnyRecord = {}): AnyRecord {
+function fakeItem(data: AnyRecord = {}): AnyRecord {
     const item: AnyRecord = {
         id: data.id ?? newId(),
         name: data.name ?? "Item",
@@ -111,25 +111,16 @@ export function fakeArmor(data: { name?: string; level?: number; traits?: string
     return armor;
 }
 
-export const hazardRule = (environment: string, limitedDuration: number | null = null) => ({
-    key: "EnvironmentalHazard",
-    active: true,
-    environment,
-    limitedDuration,
-});
+const rollOption = (option: string, item: AnyRecord) => ({ key: "RollOption", option, ignored: false, item });
 
-export const protectionRule = (counters: string[], level = "full", item: AnyRecord = { type: "armor" }) => ({
-    key: "EnvironmentalProtection",
-    active: true,
-    counters: new Set(counters),
-    level,
-    limitedDuration: null,
-    label: "Rule",
-    item,
-});
+export const hazardRule = (environment: string, limitedDuration: number | null = null) =>
+    rollOption(`environment:${environment}${limitedDuration ? `:limited:${limitedDuration}` : ""}`, { type: "effect", name: "Effect" });
+
+export const protectionRule = (environment: string, hours: number | null = null, item: AnyRecord = { type: "armor", name: "Armor" }) =>
+    rollOption(`environmental-protection:${environment}${hours ? `:limited:${hours}` : ""}`, item);
 
 // Loosely typed: fakes only model part of ActorSf2e.
-export type FakeActor = any;
+type FakeActor = any;
 
 export function fakeActor(
     data: {
@@ -150,7 +141,10 @@ export function fakeActor(
         type: data.type ?? "character",
         token: null,
         rules: data.rules ?? [],
-        rollOptions: { all: {} },
+        // Like the system, active RollOption rules set roll options.
+        get rollOptions() {
+            return { all: Object.fromEntries(actor.rules.filter((r: AnyRecord) => r.key === "RollOption").map((r: AnyRecord) => [r.option, true])) };
+        },
         allowedItemTypes: data.type === "party" || data.type === "loot" ? ["physical"] : ["condition", "effect", "physical"],
         wornArmor: data.armor ?? null,
         traits: new Set(data.traits ?? []),

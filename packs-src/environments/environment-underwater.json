@@ -10,8 +10,8 @@
         },
         "rules": [
             {
-                "key": "EnvironmentalHazard",
-                "environment": "underwater"
+                "key": "RollOption",
+                "option": "environment:underwater"
             },
             {
                 "key": "RollOption",

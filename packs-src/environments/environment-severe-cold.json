@@ -10,8 +10,8 @@
         },
         "rules": [
             {
-                "key": "EnvironmentalHazard",
-                "environment": "cold:severe"
+                "key": "RollOption",
+                "option": "environment:cold:severe"
             }
         ],
         "slug": "environment-cold-severe",

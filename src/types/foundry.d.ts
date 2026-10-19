@@ -31,30 +31,17 @@ interface EffectSf2e extends ItemSf2e {
         duration: { value: number; unit: string };
         start: { value: number };
         badge: { type?: string; value: number; min?: number | null; max?: number | null } | null;
-        rules?: { key: string; environment?: string }[];
+        rules?: { key: string; option?: string }[];
     };
     delete(options?: Record<string, unknown>): Promise<unknown>;
 }
 
 interface RuleElementInstance {
     key: string;
-    label: string;
     ignored: boolean;
-}
-
-interface RuleElementBase extends RuleElementInstance {
-    readonly actor: ActorSf2e;
-    readonly item: ItemSf2e;
-    test(rollOptions?: Iterable<string>): boolean;
-    failValidation(...message: string[]): void;
-    beforePrepareData?(): void;
-}
-
-interface RuleElementBaseConstructor {
-    new (...args: any[]): RuleElementBase;
-    defineSchema(): Record<string, unknown>;
-    autogenForms: boolean;
-    LOCALIZATION_PREFIXES: string[];
+    item: ItemSf2e;
+    /** RollOption: the option, with injected values resolved. */
+    option?: string;
 }
 
 interface ActorSf2e {
@@ -93,7 +80,6 @@ interface TokenDocumentSf2e {
 }
 
 interface RegionBehaviorSf2e {
-    name: string;
     type: string;
     disabled: boolean;
     system: unknown;
@@ -101,15 +87,12 @@ interface RegionBehaviorSf2e {
 }
 
 interface SceneSf2e {
-    name: string;
     active: boolean;
     flags: Record<string, unknown>;
     tokens: { contents: TokenDocumentSf2e[] };
 }
 
 interface RegionSf2e {
-    name: string;
-    flags: Record<string, unknown>;
     behaviors: Iterable<RegionBehaviorSf2e>;
     tokens: Set<TokenDocumentSf2e>;
 }
@@ -129,7 +112,7 @@ declare const game: {
     };
     time: { worldTime: number };
     users: { activeGM: UserSf2e | null; get(id: string): UserSf2e | undefined; filter(fn: (u: UserSf2e) => boolean): UserSf2e[] };
-    actors: { contents: ActorSf2e[]; get(id: string): ActorSf2e | undefined; party: { members: ActorSf2e[] } | null };
+    actors: { contents: ActorSf2e[]; party: { members: ActorSf2e[] } | null };
     scenes: { contents: SceneSf2e[] };
     settings: {
         register(namespace: string, key: string, config: Record<string, unknown>): void;
@@ -139,8 +122,6 @@ declare const game: {
     modules: Map<string, { active: boolean; api?: unknown; macros?: Record<string, unknown> }>;
     system: { id: string };
     pf2e: {
-        RuleElement: RuleElementBaseConstructor;
-        RuleElements: { custom: Record<string, unknown> };
         system: { sluggify(text: string): string };
     };
 };

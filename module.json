@@ -2,7 +2,7 @@
   "id": "sf2e-enhanced-environmental-protection",
   "title": "SF2e Enhanced Environmental Protection",
   "description": "Automates Starfinder 2e armor environmental protection, environments from scenes, regions and effects, and optional enhanced rules for limited protection, partial charges, and Filtered Air Supply upgrades.",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "compatibility": {
     "minimum": "14.361",
     "verified": "14.369"
@@ -40,7 +40,7 @@
   },
   "url": "https://github.com/mechamaya/sf2e-enhanced-environmental-protection",
   "manifest": "https://github.com/mechamaya/sf2e-enhanced-environmental-protection/releases/latest/download/module.json",
-  "download": "https://github.com/mechamaya/sf2e-enhanced-environmental-protection/releases/download/v0.5.0/module.zip",
+  "download": "https://github.com/mechamaya/sf2e-enhanced-environmental-protection/releases/download/v0.6.0/module.zip",
   "readme": "https://github.com/mechamaya/sf2e-enhanced-environmental-protection/blob/main/README.md",
   "license": "https://github.com/mechamaya/sf2e-enhanced-environmental-protection/blob/main/LICENSE",
   "packs": [

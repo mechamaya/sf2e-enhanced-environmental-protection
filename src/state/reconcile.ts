@@ -14,7 +14,7 @@ import { advance, deactivate } from "./charges.ts";
 import { hasManagedEffects, syncEffects } from "./effects.ts";
 
 /** Party and loot actors can't hold effects. */
-export function canHaveEffects(actor: ActorSf2e): boolean {
+function canHaveEffects(actor: ActorSf2e): boolean {
     return actor.allowedItemTypes.includes("effect");
 }
 

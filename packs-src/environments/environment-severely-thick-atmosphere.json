@@ -10,8 +10,8 @@
         },
         "rules": [
             {
-                "key": "EnvironmentalHazard",
-                "environment": "thick:severe"
+                "key": "RollOption",
+                "option": "environment:thick:severe"
             }
         ],
         "slug": "environment-thick-severe",

@@ -3,11 +3,11 @@ import { applyEnvironment, removeEnvironment } from "../src/gm/environment-tool.
 import { compendiumEffect, fakeActor, installGame } from "./support/fakes.ts";
 
 const PACK = "sf2e-enhanced-environmental-protection.environments";
-const hazard = (environment: string) => ({ key: "EnvironmentalHazard", environment });
+const hazard = (environment: string) => ({ key: "RollOption", option: `environment:${environment}` });
 
 const environmentsOf = (actor: any): string[] =>
     actor.itemTypes.effect.flatMap((e: any) =>
-        (e.system.rules ?? []).filter((r: any) => r.key === "EnvironmentalHazard").map((r: any) => r.environment),
+        (e.system.rules ?? []).flatMap((r: any) => (r.option?.startsWith("environment:") ? [r.option.slice(12)] : [])),
     );
 
 describe("environment tool", () => {

@@ -15,7 +15,7 @@ export interface ChargeState {
     settledAt: number;
 }
 
-export interface AdvanceResult {
+interface AdvanceResult {
     state: ChargeState;
     depleted: boolean;
     changed: boolean;

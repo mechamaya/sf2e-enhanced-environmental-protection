@@ -1,6 +1,6 @@
 import { MODULE_ID } from "../constants.ts";
 import { getActorHazards } from "../environments/hazards.ts";
-import { getProtections } from "../rule-elements/environmental-protection.ts";
+import { getProtections } from "../rules/roll-options.ts";
 import { getInnateProtections } from "../rules/innate.ts";
 import { profileArmor, summarizeCoverage, type CoverageSummary } from "../rules/coverage.ts";
 import type { RulesPreset } from "../rules/types.ts";

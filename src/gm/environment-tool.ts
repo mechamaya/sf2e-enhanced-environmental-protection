@@ -1,12 +1,16 @@
-import { HAZARD_RULE_KEY, MODULE_ID } from "../constants.ts";
+import { MODULE_ID } from "../constants.ts";
 import { environmentName } from "../environments/names.ts";
+import { HAZARD_PREFIX, hazardOption, parseOption } from "../rules/roll-options.ts";
 import { ENVIRONMENT_KEY_PATTERN, type EnvironmentKey } from "../rules/types.ts";
 import { localize } from "../i18n.ts";
 
 const ENVIRONMENTS_PACK = `${MODULE_ID}.environments`;
 
 function declaredEnvironments(effect: EffectSf2e): EnvironmentKey[] {
-    return (effect.system.rules ?? []).flatMap((r) => (r.key === HAZARD_RULE_KEY && r.environment ? [r.environment] : []));
+    return (effect.system.rules ?? []).flatMap((r) => {
+        const parsed = r.key === "RollOption" && r.option ? parseOption(r.option, HAZARD_PREFIX) : null;
+        return parsed ? [parsed.environment] : [];
+    });
 }
 
 function selectedActors(): ActorSf2e[] {
@@ -46,7 +50,7 @@ export async function applyEnvironment(
         type: "effect",
         img: "icons/svg/hazard.svg",
         system: {
-            rules: [{ key: HAZARD_RULE_KEY, environment: key }],
+            rules: [{ key: "RollOption", option: hazardOption(key) }],
             duration: { value: -1, unit: "unlimited", expiry: null, sustained: false },
             tokenIcon: { show: false },
         },

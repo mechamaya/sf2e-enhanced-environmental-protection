@@ -1,45 +1,5 @@
 {
-    "PF2E": {
-        "RuleElement": {
-            "EnvironmentalHazard": "Environmental Hazard",
-            "EnvironmentalProtection": "Environmental Protection"
-        }
-    },
     "SF2EEP": {
-        "RuleElement": {
-            "EnvironmentalHazard": {
-                "FIELDS": {
-                    "environment": {
-                        "label": "Environment",
-                        "hint": "For example vacuum, toxic or cold:extreme. Make up your own with lowercase words joined by - or :."
-                    },
-                    "limitedDuration": {
-                        "label": "Limited Duration (hours)",
-                        "hint": "Hours per charge when armor only partly protects. Only used with Limited Protection on."
-                    }
-                }
-            },
-            "EnvironmentalProtection": {
-                "FIELDS": {
-                    "counters": {
-                        "label": "Counters",
-                        "hint": "For example vacuum, underwater or toxic. Must match exactly: thick doesn't cover thick:severe."
-                    },
-                    "level": {
-                        "label": "Level",
-                        "hint": "Limited still protects, but drains charges faster. Resistances and save bonuses don't count as protection.",
-                        "choices": {
-                            "full": "Full",
-                            "limited": "Limited"
-                        }
-                    },
-                    "limitedDuration": {
-                        "label": "Limited Duration (hours)",
-                        "hint": "Hours per charge. Needed for Limited."
-                    }
-                }
-            }
-        },
         "Settings": {
             "limitedProtection": {
                 "Name": "Enhanced Rules: Limited Protection",

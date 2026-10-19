@@ -104,7 +104,7 @@ export function isRelevant(card: CharacterCard): boolean {
     return !!card.charges?.active || card.environments.length > 0;
 }
 
-export const SUMMARY_CHIPS = 3;
+const SUMMARY_CHIPS = 3;
 
 /** Folds fully protected chips into one when a row has too many. Never folds limited or unprotected ones. */
 export function foldCovered(chips: EnvironmentChip[]): { shown: EnvironmentChip[]; covered: EnvironmentChip[] } {
@@ -113,7 +113,7 @@ export function foldCovered(chips: EnvironmentChip[]): { shown: EnvironmentChip[
     return { shown: chips.filter((c) => c.level !== "full"), covered };
 }
 
-export function isExposed(card: CharacterCard): boolean {
+function isExposed(card: CharacterCard): boolean {
     return card.environments.some((e) => e.level === "none");
 }
 

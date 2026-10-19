@@ -10,8 +10,8 @@
         },
         "rules": [
             {
-                "key": "EnvironmentalHazard",
-                "environment": "vacuum"
+                "key": "RollOption",
+                "option": "environment:vacuum"
             },
             {
                 "key": "RollOption",
