@@ -122,7 +122,7 @@ describe("coverage", () => {
         });
     });
 
-    describe("EnvironmentalProtection rule elements", () => {
+    describe("environmental-protection roll options", () => {
         const fas: Protection = { environment: "vacuum", level: "full", hoursPerCharge: null, source: "armor", label: "FAS" };
 
         it("full beats limited", () => {

@@ -4,3 +4,6 @@ dist/
 !reference/**/*.log
 packs/
 DESIGN.md
+
+# Foundry marks a package in use with <id>.lock
+*.lock
