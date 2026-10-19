@@ -19,6 +19,12 @@ describe("environment tool", () => {
                         hazard("vacuum"),
                         { key: "RollOption", option: "terrain:vacuum" },
                     ]),
+                    compendiumEffect("corrosiveEffect1", "Environment: Corrosive Atmosphere", [hazard("corrosive")], {
+                        type: "counter",
+                        value: 1,
+                        min: 1,
+                        max: 6,
+                    }),
                 ],
             },
         });
@@ -57,5 +63,21 @@ describe("environment tool", () => {
         expect(await removeEnvironment("vacuum", actors)).toBe(3);
         for (const actor of actors) expect(environmentsOf(actor)).toEqual(["toxic"]);
         expect(await removeEnvironment("vacuum", actors)).toBe(0);
+    });
+
+    it("level", async () => {
+        const levelOf = (actor: any) => actor.itemTypes.effect[0].system.badge.value;
+        const [inIt, fresh] = [fakeActor(), fakeActor()];
+        await applyEnvironment("corrosive", [inIt]);
+        expect(levelOf(inIt)).toBe(1);
+
+        expect(await applyEnvironment("corrosive", [inIt, fresh], 4)).toBe(2);
+        expect([levelOf(inIt), levelOf(fresh)]).toEqual([4, 4]);
+        await applyEnvironment("corrosive", [inIt], 9);
+        expect(levelOf(inIt)).toBe(6);
+        expect(await applyEnvironment("corrosive", [inIt], 6)).toBe(0);
+
+        await applyEnvironment("vacuum", [fresh], 3);
+        expect(fresh.itemTypes.effect).toHaveLength(2);
     });
 });

@@ -30,7 +30,7 @@ interface EffectSf2e extends ItemSf2e {
         description: { value: string };
         duration: { value: number; unit: string };
         start: { value: number };
-        badge: { value: number; min?: number | null; max?: number | null } | null;
+        badge: { type?: string; value: number; min?: number | null; max?: number | null } | null;
         rules?: { key: string; environment?: string }[];
     };
     delete(options?: Record<string, unknown>): Promise<unknown>;

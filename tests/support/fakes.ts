@@ -226,7 +226,8 @@ export function effectsWithRole(actor: FakeActor, role: string): AnyRecord[] {
     return actor.itemTypes.effect.filter((e: AnyRecord) => e.getFlag("sf2e-enhanced-environmental-protection", "role") === role);
 }
 
-export function compendiumEffect(_id: string, name: string, rules: AnyRecord[]): AnyRecord {
-    const source = { _id, name, type: "effect", img: "icon.webp", system: { rules } };
-    return { id: _id, name, type: "effect", system: { rules }, source };
+export function compendiumEffect(_id: string, name: string, rules: AnyRecord[], badge: AnyRecord | null = null): AnyRecord {
+    const system = { rules, badge };
+    const source = { _id, name, type: "effect", img: "icon.webp", system };
+    return { id: _id, name, type: "effect", system: structuredClone(system), source };
 }

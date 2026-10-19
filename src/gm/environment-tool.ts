@@ -23,8 +23,19 @@ async function compendiumEnvironments(): Promise<Map<EnvironmentKey, EffectSf2e>
     return byKey;
 }
 
-/** Skips actors already in that environment. Returns how many it was applied to. */
-export async function applyEnvironment(key: EnvironmentKey, actors: ActorSf2e[] = selectedActors()): Promise<number> {
+type Badge = NonNullable<EffectSf2e["system"]["badge"]>;
+
+// Within the badge's min (1 by default, as in the system) and max.
+function badgeLevel(badge: Badge, level: number): number {
+    return Math.min(Math.max(Math.round(level), badge.min ?? 1), badge.max ?? Number.POSITIVE_INFINITY);
+}
+
+/** With a `level`, actors already in the environment change to it. Returns how many were applied or changed. */
+export async function applyEnvironment(
+    key: EnvironmentKey,
+    actors: ActorSf2e[] = selectedActors(),
+    level?: number,
+): Promise<number> {
     if (!ENVIRONMENT_KEY_PATTERN.test(key)) {
         ui.notifications.warn(localize("EnvironmentTool.InvalidKey", { key }));
         return 0;
@@ -41,9 +52,22 @@ export async function applyEnvironment(key: EnvironmentKey, actors: ActorSf2e[] 
         },
     };
 
-    const targets = actors.filter((a) => !a.itemTypes.effect.some((e) => declaredEnvironments(e).includes(key)));
+    const badge = (source.system as { badge?: Badge | null }).badge;
+    if (level !== undefined && badge?.type === "counter") badge.value = badgeLevel(badge, level);
+
+    const existing = (a: ActorSf2e) => a.itemTypes.effect.filter((e) => declaredEnvironments(e).includes(key));
+    const targets = actors.filter((a) => existing(a).length === 0);
     await Promise.all(targets.map((a) => a.createEmbeddedDocuments("Item", [structuredClone(source)])));
-    return targets.length;
+    if (level === undefined) return targets.length;
+
+    let changed = 0;
+    for (const effect of actors.flatMap(existing)) {
+        const current = effect.system.badge;
+        if (current?.type !== "counter" || current.value === badgeLevel(current, level)) continue;
+        await effect.update({ system: { badge: { ...current, value: badgeLevel(current, level) } } });
+        changed++;
+    }
+    return targets.length + changed;
 }
 
 /** Returns how many actors it was removed from. */
@@ -85,14 +109,22 @@ export async function openEnvironmentDialog(): Promise<void> {
             <label>${localize("EnvironmentTool.CustomKey")}</label>
             <input type="text" name="custom" placeholder="spore-cloud">
             <p class="hint">${localize("EnvironmentTool.CustomKeyHint")}</p>
+        </div>
+        <div class="form-group">
+            <label>${localize("EnvironmentTool.Level")}</label>
+            <input type="number" name="level" min="1" step="1">
+            <p class="hint">${localize("EnvironmentTool.LevelHint")}</p>
         </div>`;
 
-    const chosen = (button: HTMLButtonElement): EnvironmentKey => {
-        const elements = button.form!.elements as unknown as Record<string, HTMLInputElement>;
-        return elements.custom!.value.trim().toLowerCase() || elements.environment!.value;
+    const elements = (button: HTMLButtonElement) => button.form!.elements as unknown as Record<string, HTMLInputElement>;
+    const chosen = (button: HTMLButtonElement): EnvironmentKey =>
+        elements(button).custom!.value.trim().toLowerCase() || elements(button).environment!.value;
+    const level = (button: HTMLButtonElement): number | undefined => {
+        const value = elements(button).level!.value;
+        return value === "" ? undefined : Number(value);
     };
-    const run = async (action: "apply" | "remove", key: EnvironmentKey) => {
-        const count = action === "apply" ? await applyEnvironment(key) : await removeEnvironment(key);
+    const run = async (action: "apply" | "remove", key: EnvironmentKey, at?: number) => {
+        const count = action === "apply" ? await applyEnvironment(key, undefined, at) : await removeEnvironment(key);
         ui.notifications.info(localize(action === "apply" ? "EnvironmentTool.Applied" : "EnvironmentTool.Removed", { name: environmentName(key), count }));
     };
 
@@ -101,7 +133,7 @@ export async function openEnvironmentDialog(): Promise<void> {
         content,
         rejectClose: false,
         buttons: [
-            { action: "apply", label: localize("EnvironmentTool.Apply"), default: true, callback: (_e: Event, b: HTMLButtonElement) => run("apply", chosen(b)) },
+            { action: "apply", label: localize("EnvironmentTool.Apply"), default: true, callback: (_e: Event, b: HTMLButtonElement) => run("apply", chosen(b), level(b)) },
             { action: "remove", label: localize("EnvironmentTool.Remove"), callback: (_e: Event, b: HTMLButtonElement) => run("remove", chosen(b)) },
         ],
     });
